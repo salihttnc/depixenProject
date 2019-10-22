@@ -1,0 +1,28 @@
+
+<div class="row" id="container" style="margin-left:150px;margin-right:150px">
+
+     
+   <div *ngFor="let film of films; " class="card productbox" style=" width: 18rem;">
+      <img src="{{ film.Poster }}" width="250" height="350" class="card-img-top" alt="..." />
+      <div class="card-body">
+         <h5 class="card-title">{{ film.Title }}</h5>
+         <p class="card-text">
+            {{ film.Year }}
+         </p>
+         <p class="card-text">
+            {{ film.imdbID }}
+
+         </p>
+         
+
+         <p>{{ film.Type }}</p>
+
+      </div>
+      <a style="position: absolute; bottom:0;margin-bottom:10px" id="detail" routerLink='detail/{{film.imdbID}}'
+         routerLinkActive="active" class="btn btn-primary">Detaya Git</a>
+   </div>
+
+</div>
+
+
+

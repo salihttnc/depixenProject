@@ -1,0 +1,25 @@
+<div class="row" style="margin-left:150px;margin-right:150px">
+
+
+    <div class="card productbox " style="width: 18rem;">
+        <img src="{{ films.Poster }}" width="250" height="350" class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">{{ films.Title }}</h5>
+            <p class="card-text">
+                {{ films.Year }}
+            </p>
+            <p class="card-text">
+                {{ films.imdbID }}
+            </p>
+
+            <p class="card-text">{{ films.Type }}</p>
+            <p class="card-text">{{ films.Awards }}</p>
+            <p class="card-text">{{ films.Actors }}</p>
+            <p class="card-text">{{ films.Director }}</p>
+          
+
+        </div>
+    </div>
+    <a style="position: absolute; bottom:0;margin-bottom:10px" id="detail" routerLink=''
+        (click)="sendMessage(films.imdbID)" class="btn btn-primary">Ana Sayfayı Dönmek İçin Tıklayın</a>
+</div>
